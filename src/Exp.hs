@@ -186,8 +186,7 @@ instance ToJSON NullInfo
 
 deriving instance Generic EATrace
 deriving instance Show EATrace
-instance (ToJSON a)=>ToJSON (Seq.Seq a) where
-  toJSON = toJSON . DF.toList
+
 instance ToJSON EATrace
   
 
