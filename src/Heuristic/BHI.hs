@@ -1,3 +1,4 @@
+{-# LANGUAGE DeriveGeneric #-}
 module Heuristic.BHI (bhil, bhie, bhie2, bhir) where
 
 import           Heuristic       (InfinityPool, PartialSchedule (..), Pool (..))
@@ -8,8 +9,10 @@ import           Control.DeepSeq (NFData (..))
 import           Data.List       (minimumBy)
 import           Data.Ord        (comparing)
 import qualified Data.Vector     as Vec
+import GHC.Generics (Generic)
 
 data WeightType = Liner | Exp | Exp2 | Rnd
+                  deriving Generic
 
 instance NFData WeightType
 
